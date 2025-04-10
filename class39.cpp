@@ -9,6 +9,7 @@ class Students{
     Students();
     Students(string name,int rollno,float cgpa,int nocour);
     Students(const Students &r);
+    void addnew();
     ~Students(){
      cout<<"\n destructor called";
     }
@@ -36,8 +37,20 @@ void Students::display(){
     cout<<"\n cgpa is "<<cgpa;
     cout<<"\n nocour is "<<nocour;
 }
+void Students::addnew(){
+    cout<<"\n add name of student";
+    cin>>name;
+    cout<<"\n roll no";
+    cin>>rollno;
+    cout<<"\n cgpa ";
+    cin>>cgpa;
+    cout<<"\n course num";
+    cin>>nocour;
+}
 int main(){
-    Students s1("gauri",23,4.5,8),s2("abhiraj",34,5.6,7),s3(s1);
+    Students s1("gauri",23,4.5,8),s2("abhiraj",34,5.6,7),s3(s1),s5;
+    s5.addnew();
+    s5.display();
     s1.display();
     s2.display();
     s3.display();
